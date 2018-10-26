@@ -32,13 +32,15 @@ def plot(newweights, X, Y,feature1, feature2):
         if(abs(prediction + Y[i]) == abs(prediction) + abs(Y[i])):
             print("Correct", prediction, Y[i])
             if (Y[i] < 0):
-                plt.scatter(feature1[i], feature2[i], color="brown", marker="^", label='setosa')
+                plt.scatter(feature1[i], feature2[i], color="red", marker="^", label='setosa')
             else:
                 plt.scatter(feature1[i], feature2[i], color="blue", marker="^", label='sersocolor')
         else:
             print("In-correct", prediction, Y[i])
-            plt.scatter(feature1[i], feature2[i], color="red", marker="x", label='misclassified')
-
+            if (Y[i] < 0):
+                plt.scatter(feature1[i], feature2[i], color="blue", marker="^", label='setosa')
+            else:
+                plt.scatter(feature1[i], feature2[i], color="red", marker="^", label='sersocolor')
 
     versicolor = mpatches.Patch(color='blue', label='Versicolor')
     setosa = mpatches.Patch(color='brown', label='Setosa')
@@ -94,7 +96,7 @@ def main():
     lrate=0.001
 
     # Define number of iterations for training
-    iterations=10
+    iterations=2
 
     newweights=train(X,Y,weights,lrate,iterations)
 
