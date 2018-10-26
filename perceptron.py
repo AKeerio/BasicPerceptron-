@@ -42,11 +42,10 @@ def plot(newweights, X, Y,feature1, feature2):
             else:
                 plt.scatter(feature1[i], feature2[i], color="red", marker="^", label='sersocolor')
 
-    versicolor = mpatches.Patch(color='blue', label='Versicolor')
-    setosa = mpatches.Patch(color='brown', label='Setosa')
-    misclassified=mpatches.Patch(color='red', label='Misclassified')
+    versicolor = mpatches.Patch(color='red', label='Versicolor')
+    setosa = mpatches.Patch(color='blue', label='Setosa')
 
-    plt.legend(handles=[versicolor, setosa, misclassified])
+    plt.legend(handles=[versicolor, setosa])
     plt.xlabel('Feature 2')
     plt.ylabel('Feature 1')
     plt.show()
