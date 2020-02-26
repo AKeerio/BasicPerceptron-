@@ -2,7 +2,7 @@
 
 Implement the perceptron algorithm:
 
-![Perceptron Algorithm](https://bitbucket.org/Aijaz1/perceptron/raw/8c1f942e6c53f315698a7005723927a74fe45f25/perceptron_algo.png)
+![Perceptron Algorithm](https://github.com/AKeerio/BasicPerceptron-/blob/master/perceptron_algo.png)
 
 and run it to classify the data of the famous Iris dataset: https://archive.ics.uci.edu/ml/datasets/Iris
 
